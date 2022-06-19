@@ -117,6 +117,7 @@ body {
     display: flex;
     column-gap: 2rem;
     margin-bottom: 10rem;
+    margin-left: 4rem;
   }
   &__box {
     width: 20rem;
@@ -133,12 +134,18 @@ body {
       width: 100%;
       border-radius: inherit;
       height: 100%;
-      top: .6rem;
-      left: .6rem;
+      top: 0.6rem;
+      left: 0.6rem;
     }
     &--1 {
+      & .card__box__header {
+        background-color: #18d3d3;
+      }
     }
     &--2 {
+      & .card__box__header {
+        background-color: #D37D18;
+      }
     }
     &__clone {
       position: absolute;
@@ -150,9 +157,36 @@ body {
     }
     &__head {
       &er {
+        // position: absolute;
+        width: 100%;
+        height: 5rem;
+        border-radius: 5px 5px 0 0;
+        // border: 2px solid black;
+        border-bottom: 3px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 2rem;
       }
       &ing {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        line-height: 1.6;
       }
     }
+    &__content {
+      margin-top: 2rem;
+    }
+    &__list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+    &__item {
+      &:not(:last-child) {
+        // margin-bottom: 1rem;
+      }
   }
+}
 }
