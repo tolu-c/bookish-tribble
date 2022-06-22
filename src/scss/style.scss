@@ -116,12 +116,12 @@ body {
   &__container {
     display: flex;
     column-gap: 2rem;
-    margin-bottom: 10rem;
+    margin: 10rem 0;
     margin-left: 4rem;
   }
   &__box {
-    width: 20rem;
-    height: 25rem;
+    width: 25rem;
+    height: 30rem;
     border: 3px solid black;
     position: relative;
     z-index: 99999;
@@ -144,7 +144,7 @@ body {
     }
     &--2 {
       & .card__box__header {
-        background-color: #D37D18;
+        background-color: #d37d18;
       }
     }
     &__clone {
@@ -160,8 +160,8 @@ body {
         // position: absolute;
         width: 100%;
         height: 5rem;
-        border-radius: 5px 5px 0 0;
-        // border: 2px solid black;
+        border-radius: 3px 3px 0 0;
+        border-bottom: 2px solid black;
         border-bottom: 3px solid black;
         display: flex;
         align-items: center;
@@ -176,6 +176,7 @@ body {
     }
     &__content {
       margin-top: 2rem;
+      padding: 1.5rem;
     }
     &__list {
       list-style-type: none;
@@ -184,9 +185,57 @@ body {
       row-gap: 1rem;
     }
     &__item {
+      display: flex;
+      column-gap: 1.5rem;
+      align-items: center;
       &:not(:last-child) {
-        // margin-bottom: 1rem;
+        margin-bottom: 1rem;
       }
+    }
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      &__svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__text {
+      font-size: 2.4rem;
+    }
   }
 }
+// another font import
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap");
+.news {
+  &__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    &--main {
+      font-size: 3.6rem;
+    }
+    &--sub {
+      display: flex;
+      align-items: center;
+      column-gap: 1.5rem;
+    }
+  }
+  &__svg {
+    width: 3rem;
+    height: 3rem;
+    &__icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__date,
+  &__text {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 1.6rem;
+  }
+  &__link {
+    font-family: "Bebas Neue", cursive;
+    color: #18D3D3;
+  }
 }
